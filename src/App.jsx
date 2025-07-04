@@ -24,11 +24,6 @@ import Projects from './pages/Projects/Projects';
 import Tasks from './pages/Tasks/Tasks';
 import TimeTracker from './pages/TimeTracker/TimeTracker';
 import Alerts from './pages/Alerts/Alerts';
-import DataGovernance from './pages/DataGovernance/DataGovernance';
-import Reporting from './pages/Reporting/Reporting';
-import Clients from './pages/Clients/Clients';
-import Settings from './pages/Settings/Settings';
-import Help from './pages/Help/Help';
 
 // Auth Pages
 import Login from './pages/Auth/Login';
@@ -149,11 +144,6 @@ function ProtectedRoutes() {
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/time-tracker" element={<TimeTracker />} />
         <Route path="/alerts" element={<Alerts />} />
-        <Route path="/data-governance" element={<DataGovernance />} />
-        <Route path="/reporting" element={<Reporting />} />
-        <Route path="/clients" element={<Clients />} />
-        <Route path="/settings/*" element={<Settings />} />
-        <Route path="/help" element={<Help />} />
       </Routes>
     </Layout>
   );

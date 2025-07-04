@@ -8,8 +8,8 @@ import * as FiIcons from 'react-icons/fi';
 
 const {
   FiHome, FiUsers, FiPackage, FiCreditCard, FiFileText, FiDollarSign,
-  FiFolderPlus, FiCheckSquare, FiClock, FiBell, FiShield, FiBarChart3,
-  FiUserCheck, FiSettings, FiHelpCircle, FiZap, FiChevronLeft,
+  FiFolderPlus, FiCheckSquare, FiClock, FiBell,
+  FiZap, FiChevronLeft,
   FiChevronRight, FiPin, FiPinOff
 } = FiIcons;
 
@@ -90,41 +90,7 @@ const menuItems = [
     path: '/alerts',
     roles: ['ADMIN', 'CLIENT']
   },
-  {
-    id: 'data-governance',
-    label: 'Data Governance',
-    icon: FiShield,
-    path: '/data-governance',
-    roles: ['ADMIN']
-  },
-  {
-    id: 'reporting',
-    label: 'Reporting',
-    icon: FiBarChart3,
-    path: '/reporting',
-    roles: ['ADMIN', 'CLIENT']
-  },
-  {
-    id: 'clients',
-    label: 'Clients & Teams',
-    icon: FiUserCheck,
-    path: '/clients',
-    roles: ['ADMIN']
-  },
-  {
-    id: 'settings',
-    label: 'Settings',
-    icon: FiSettings,
-    path: '/settings',
-    roles: ['ADMIN', 'CLIENT', 'TEAM_MEMBER']
-  },
-  {
-    id: 'help',
-    label: 'Help & Support',
-    icon: FiHelpCircle,
-    path: '/help',
-    roles: ['ADMIN', 'CLIENT', 'TEAM_MEMBER']
-  }
+  // Additional menu items can be added here when new pages are implemented
 ];
 
 function Sidebar() {
