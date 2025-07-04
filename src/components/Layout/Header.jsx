@@ -5,7 +5,7 @@ import { useAuth } from '../../contexts/AuthContext';
 import SafeIcon from '../SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const { 
+const {
   FiSearch, FiBell, FiSettings, FiLogOut, FiUser, FiMoon, FiSun,
   FiGlobe, FiDollarSign, FiChevronDown, FiCheck, FiX
 } = FiIcons;
@@ -164,7 +164,6 @@ function Header() {
                 <div className="p-4 border-b border-gray-200">
                   <h3 className="font-semibold text-gray-900">Notifications</h3>
                 </div>
-                
                 <div className="max-h-80 overflow-y-auto">
                   {notifications.map((notification) => (
                     <div
@@ -186,7 +185,6 @@ function Header() {
                     </div>
                   ))}
                 </div>
-                
                 <div className="p-4 border-t border-gray-200">
                   <button className="w-full text-center text-sm text-primary-600 hover:text-primary-700 font-medium">
                     View all notifications

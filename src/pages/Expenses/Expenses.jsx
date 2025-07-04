@@ -9,9 +9,8 @@ const { FiDollarSign, FiPlus, FiCalendar, FiTag, FiPaperclip, FiTrendingUp, FiTr
 function Expenses() {
   const { state } = useApp();
   const [selectedPeriod, setSelectedPeriod] = useState('thisMonth');
-  
   const currencySymbol = state.currency === 'INR' ? '₹' : '$';
-  
+
   const expenses = [
     {
       id: 1,

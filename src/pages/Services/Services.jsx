@@ -8,7 +8,7 @@ const { FiPackage, FiPlus, FiEdit, FiTrash, FiClock, FiDollarSign } = FiIcons;
 
 function Services() {
   const { state } = useApp();
-  const [services, setServices] = useState([
+  const [services] = useState([
     {
       id: 1,
       name: 'SEO Optimization',

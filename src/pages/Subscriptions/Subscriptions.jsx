@@ -9,9 +9,8 @@ const { FiCreditCard, FiUsers, FiCheck, FiX, FiRefreshCw, FiAlertCircle } = FiIc
 function Subscriptions() {
   const { state } = useApp();
   const [activeTab, setActiveTab] = useState('plans');
-  
   const currencySymbol = state.currency === 'INR' ? '₹' : '$';
-  
+
   const plans = [
     {
       id: 1,
@@ -133,7 +132,7 @@ function Subscriptions() {
                     <span className="text-sm text-gray-500 ml-2">/{plan.billing}</span>
                   </div>
                 </div>
-
+                
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
@@ -142,7 +141,7 @@ function Subscriptions() {
                     </li>
                   ))}
                 </ul>
-
+                
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm text-gray-600">Subscribers</p>
@@ -188,9 +187,7 @@ function Subscriptions() {
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{subscription.plan}</td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                        subscription.status === 'active' 
-                          ? 'bg-green-100 text-green-800'
-                          : 'bg-red-100 text-red-800'
+                        subscription.status === 'active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
                       }`}>
                         {subscription.status === 'active' ? 'Active' : 'Past Due'}
                       </span>

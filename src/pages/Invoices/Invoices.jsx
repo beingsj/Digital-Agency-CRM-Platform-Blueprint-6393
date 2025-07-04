@@ -9,9 +9,8 @@ const { FiFileText, FiPlus, FiEye, FiDownload, FiSend, FiDollarSign, FiClock, Fi
 function Invoices() {
   const { state } = useApp();
   const [activeTab, setActiveTab] = useState('all');
-  
   const currencySymbol = state.currency === 'INR' ? '₹' : '$';
-  
+
   const invoices = [
     {
       id: 'INV-2024-001',
@@ -67,9 +66,7 @@ function Invoices() {
     }
   };
 
-  const filteredInvoices = activeTab === 'all' 
-    ? invoices 
-    : invoices.filter(invoice => invoice.status === activeTab);
+  const filteredInvoices = activeTab === 'all' ? invoices : invoices.filter(invoice => invoice.status === activeTab);
 
   const stats = {
     total: invoices.reduce((sum, inv) => sum + inv.amount, 0),

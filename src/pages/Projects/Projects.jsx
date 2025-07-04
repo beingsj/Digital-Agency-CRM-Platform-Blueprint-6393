@@ -175,7 +175,7 @@ function Projects() {
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div 
-                    className="bg-primary-500 h-2 rounded-full transition-all duration-300"
+                    className="bg-primary-500 h-2 rounded-full transition-all duration-300" 
                     style={{ width: `${project.progress}%` }}
                   />
                 </div>
@@ -197,7 +197,7 @@ function Projects() {
                   </span>
                   <span>{project.team.length} members</span>
                 </div>
-
+                
                 <div className="flex items-center justify-between">
                   <span>Budget:</span>
                   <span>${project.spent.toLocaleString()} / ${project.budget.toLocaleString()}</span>
@@ -244,7 +244,7 @@ function Projects() {
                       <div className="flex items-center">
                         <div className="w-16 bg-gray-200 rounded-full h-2 mr-2">
                           <div 
-                            className="bg-primary-500 h-2 rounded-full"
+                            className="bg-primary-500 h-2 rounded-full" 
                             style={{ width: `${project.progress}%` }}
                           />
                         </div>

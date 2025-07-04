@@ -130,7 +130,6 @@ function Alerts() {
         <div className="p-6 border-b border-gray-200">
           <h2 className="text-lg font-semibold text-gray-900">Configured Alerts</h2>
         </div>
-        
         <div className="divide-y divide-gray-200">
           {alerts.map((alert, index) => (
             <motion.div
@@ -148,9 +147,7 @@ function Alerts() {
                     }`}>
                       <SafeIcon 
                         icon={FiBell} 
-                        className={`w-5 h-5 ${
-                          alert.status === 'active' ? 'text-green-600' : 'text-gray-600'
-                        }`} 
+                        className={`w-5 h-5 ${alert.status === 'active' ? 'text-green-600' : 'text-gray-600'}`} 
                       />
                     </div>
                     <div>
@@ -158,7 +155,7 @@ function Alerts() {
                       <p className="text-sm text-gray-600">{alert.description}</p>
                     </div>
                   </div>
-
+                  
                   <div className="ml-13 space-y-2">
                     <div className="flex items-center space-x-2">
                       <span className="text-sm text-gray-500">Condition:</span>
@@ -176,7 +173,7 @@ function Alerts() {
                         ))}
                       </div>
                     </div>
-
+                    
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
                       <span>Triggered: {alert.triggered} times</span>
                       {alert.lastTriggered && (
@@ -185,16 +182,13 @@ function Alerts() {
                     </div>
                   </div>
                 </div>
-
+                
                 <div className="flex items-center space-x-3">
                   <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                    alert.status === 'active' 
-                      ? 'bg-green-100 text-green-800'
-                      : 'bg-gray-100 text-gray-800'
+                    alert.status === 'active' ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'
                   }`}>
                     {alert.status}
                   </span>
-                  
                   <div className="flex space-x-2">
                     <button className="text-gray-400 hover:text-gray-600">
                       <SafeIcon icon={FiSettings} className="w-4 h-4" />
@@ -212,7 +206,6 @@ function Alerts() {
         <div className="p-6 border-b border-gray-200">
           <h2 className="text-lg font-semibold text-gray-900">Notification Channels</h2>
         </div>
-        
         <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             { name: 'Email', icon: FiMail, status: 'connected', description: 'admin@company.com' },
@@ -227,9 +220,7 @@ function Alerts() {
                 }`}>
                   <SafeIcon 
                     icon={channel.icon} 
-                    className={`w-5 h-5 ${
-                      channel.status === 'connected' ? 'text-green-600' : 'text-gray-600'
-                    }`} 
+                    className={`w-5 h-5 ${channel.status === 'connected' ? 'text-green-600' : 'text-gray-600'}`} 
                   />
                 </div>
                 <div>
@@ -237,10 +228,9 @@ function Alerts() {
                   <p className="text-xs text-gray-500">{channel.description}</p>
                 </div>
               </div>
-              
               <button className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                channel.status === 'connected'
-                  ? 'bg-green-100 text-green-700 hover:bg-green-200'
+                channel.status === 'connected' 
+                  ? 'bg-green-100 text-green-700 hover:bg-green-200' 
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}>
                 {channel.status === 'connected' ? 'Connected' : 'Connect'}

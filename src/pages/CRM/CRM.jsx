@@ -173,7 +173,7 @@ function Contacts() {
           Add Contact
         </button>
       </div>
-
+      
       <div className="bg-white rounded-lg shadow-soft p-6">
         <p className="text-gray-600">Contact management interface coming soon...</p>
       </div>
@@ -194,7 +194,7 @@ function Companies() {
           Add Company
         </button>
       </div>
-
+      
       <div className="bg-white rounded-lg shadow-soft p-6">
         <p className="text-gray-600">Company management interface coming soon...</p>
       </div>
@@ -215,7 +215,7 @@ function Opportunities() {
           Add Opportunity
         </button>
       </div>
-
+      
       <div className="bg-white rounded-lg shadow-soft p-6">
         <p className="text-gray-600">Opportunities management interface coming soon...</p>
       </div>

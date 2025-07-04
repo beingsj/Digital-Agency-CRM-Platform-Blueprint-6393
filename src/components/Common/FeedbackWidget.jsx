@@ -28,13 +28,13 @@ function FeedbackWidget() {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Capture screenshot
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      
+
       // Mock feedback submission
       const feedbackData = {
         feedback,
@@ -47,8 +47,8 @@ function FeedbackWidget() {
       };
 
       console.log('Feedback submitted:', feedbackData);
-      
       toast.success('Thank you for your feedback!');
+
       setFeedback('');
       setRating(0);
       setCategory('general');

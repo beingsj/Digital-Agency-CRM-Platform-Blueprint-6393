@@ -185,13 +185,11 @@ function Tasks() {
                     readOnly
                   />
                 </div>
-                
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between">
                     <div>
                       <h3 className="text-sm font-medium text-gray-900">{task.title}</h3>
                       <p className="text-sm text-gray-600 mt-1">{task.description}</p>
-                      
                       <div className="flex items-center space-x-4 mt-3">
                         <span className="text-xs bg-primary-100 text-primary-600 px-2 py-1 rounded">
                           {task.project}
@@ -210,7 +208,6 @@ function Tasks() {
                         </div>
                       </div>
                     </div>
-                    
                     <div className="flex items-center space-x-3">
                       <SafeIcon 
                         icon={FiFlag} 

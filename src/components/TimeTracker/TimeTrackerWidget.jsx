@@ -111,15 +111,11 @@ function TimeTrackerWidget() {
               {isRunning ? (isPaused ? 'Paused' : 'Running') : 'Stopped'}
             </span>
           </div>
-          
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="p-1 rounded hover:bg-gray-100 transition-colors"
           >
-            <SafeIcon 
-              icon={isExpanded ? FiChevronDown : FiChevronUp} 
-              className="w-4 h-4 text-gray-400" 
-            />
+            <SafeIcon icon={isExpanded ? FiChevronDown : FiChevronUp} className="w-4 h-4 text-gray-400" />
           </button>
         </div>
 
@@ -152,7 +148,6 @@ function TimeTrackerWidget() {
                 <SafeIcon icon={isPaused ? FiPlay : FiPause} className="w-4 h-4" />
                 <span className="text-sm">{isPaused ? 'Resume' : 'Pause'}</span>
               </button>
-              
               <button
                 onClick={handleStop}
                 className="flex items-center space-x-2 px-3 py-2 bg-danger-600 text-white rounded-lg hover:bg-danger-700 transition-colors"
@@ -187,7 +182,7 @@ function TimeTrackerWidget() {
                   <option value="brand-identity">Brand Identity</option>
                 </select>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-3 text-sm">
                 <div>
                   <span className="text-gray-600">Today:</span>
@@ -198,7 +193,7 @@ function TimeTrackerWidget() {
                   <span className="font-medium ml-2">32h 15m</span>
                 </div>
               </div>
-              
+
               <button className="w-full text-center text-sm text-primary-600 hover:text-primary-700 font-medium">
                 View detailed tracker
               </button>

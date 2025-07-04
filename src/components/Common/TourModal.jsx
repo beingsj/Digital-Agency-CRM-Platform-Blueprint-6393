@@ -113,7 +113,7 @@ function TourModal({ isOpen, onClose, onComplete }) {
           {/* Progress Bar */}
           <div className="px-4 py-2">
             <div className="w-full bg-gray-200 rounded-full h-2">
-              <div 
+              <div
                 className="bg-gradient-to-r from-primary-500 to-secondary-500 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${((currentStep + 1) / tourSteps.length) * 100}%` }}
               />
