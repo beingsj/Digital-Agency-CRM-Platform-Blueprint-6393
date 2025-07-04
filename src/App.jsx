@@ -36,7 +36,7 @@ import Register from './pages/Auth/Register';
 import ForgotPassword from './pages/Auth/ForgotPassword';
 
 // Hooks
-import { useAuth } from './hooks/useAuth';
+import { useAuth } from './contexts/AuthContext';
 
 // Styles
 import './App.css';
