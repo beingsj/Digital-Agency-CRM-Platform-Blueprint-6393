@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useApp } from '../../contexts/AppContext';
 import { useAuth } from '../../contexts/AuthContext';
+import { useLocation } from 'react-router-dom';
 
 // Components
 import Sidebar from './Sidebar';
@@ -15,6 +16,7 @@ import TourModal from '../Common/TourModal';
 function Layout({ children }) {
   const { state } = useApp();
   const { user } = useAuth();
+  const location = useLocation();
   const [showTour, setShowTour] = useState(false);
 
   // Show tour for new users
