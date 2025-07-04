@@ -8,7 +8,7 @@ import * as FiIcons from 'react-icons/fi';
 
 const {
   FiHome, FiUsers, FiPackage, FiCreditCard, FiFileText, FiDollarSign,
-  FiFolderPlus, FiCheckSquare, FiClock, FiBell, FiShield, FiBarChart3,
+  FiFolderPlus, FiCheckSquare, FiClock, FiBell, FiShield, FiBarChart2,
   FiUserCheck, FiSettings, FiHelpCircle, FiZap, FiChevronLeft,
   FiChevronRight, FiPin, FiPinOff
 } = FiIcons;
@@ -100,7 +100,7 @@ const menuItems = [
   {
     id: 'reporting',
     label: 'Reporting',
-    icon: FiBarChart3,
+    icon: FiBarChart2,
     path: '/reporting',
     roles: ['ADMIN', 'CLIENT']
   },
