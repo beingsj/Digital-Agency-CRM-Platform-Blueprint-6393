@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useApp } from '../../contexts/AppContext';
 import { useAuth } from '../../contexts/AuthContext';
 import SafeIcon from '../SafeIcon';
@@ -240,27 +240,29 @@ function Sidebar() {
                   
                   {/* Submenu */}
                   {item.submenu && isActive(item.path) && !state.sidebar.collapsed && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="ml-8 mt-1 space-y-1"
-                    >
-                      {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.path}
-                          to={subItem.path}
-                          className={`block px-3 py-1 text-sm rounded transition-colors ${
-                            location.pathname === subItem.path
-                              ? 'text-primary-600 bg-primary-50'
-                              : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
-                          }`}
-                        >
-                          {subItem.label}
-                        </Link>
-                      ))}
-                    </motion.div>
+                    <AnimatePresence>
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="ml-8 mt-1 space-y-1"
+                      >
+                        {item.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.path}
+                            to={subItem.path}
+                            className={`block px-3 py-1 text-sm rounded transition-colors ${
+                              location.pathname === subItem.path
+                                ? 'text-primary-600 bg-primary-50'
+                                : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                            }`}
+                          >
+                            {subItem.label}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    </AnimatePresence>
                   )}
                 </div>
               ))}
@@ -295,15 +297,17 @@ function Sidebar() {
       </motion.div>
       
       {/* Overlay for mobile */}
-      {!state.sidebar.collapsed && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-50 z-20 md:hidden"
-          onClick={toggleSidebar}
-        />
-      )}
+      <AnimatePresence>
+        {!state.sidebar.collapsed && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-50 z-20 md:hidden"
+            onClick={toggleSidebar}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 }
